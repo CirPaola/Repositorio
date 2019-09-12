@@ -1,0 +1,81 @@
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menú</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+ <link rel="stylesheet" href="fonts/style.css">
+ <style type="text/css">
+   body {
+ text-align: center;
+  background-color:#000; /*color fondo*/
+  background-image:url(6.jpg); /*imagen fondo*/
+  background-repeat: no-repeat; /*elimina copias*/
+  background-size: 100% 820px; /*tamaño de fondo*/
+  background-position: top; /*centra fondo*/
+  background-attachment: fixed;
+}
+   .color{
+    background-color: #A064DA;
+    
+   }
+   .colorcito{
+    background-color: #A064DA;
+   }
+   p{
+    color: #ffff;
+   }
+   h1{
+    color: #3D2C82;
+    font: bold 50px verdana, sans-serif; 
+   }
+   span{
+      color: #fff;
+   }
+ </style>
+
+  </head>
+  <body>
+  <div class="container-fluid">
+  <h1>Menú</h1>
+  <nav class="navbar navbar-inverse ">
+  <div class="container-fluid colorcito">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#miMenu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <!-- Brand, no collapsa -->
+      <a class="navbar-brand" href="#"><span class="icon-home"> Welcome</a></span> 
+    </div>
+    <div class="collapse navbar-collapse" id="miMenu">
+      <ul class="nav navbar-nav">
+        <li><a href="#"><span class="icon-star-empty"> Featured</a></li></span>
+        <li><a href="#"><span class="icon-users"> People</a></li></span>
+
+      <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" ><span class="icon-music"> Music </span><span class="caret"></span>
+    </a>
+        <ul class="dropdown-menu color">
+      <li><a href="#"><p>Poop</p></a></li>
+      <li><a href="#"><p>Rock</p> </a></li>
+      <li><a href="#"><p>K pop</p> </a></li>
+      <li><a href="#"><p>Clasica</p> </a></li>
+      </ul>
+        </li>
+
+        <li><a href="#"><span class="icon-tab"> Mixes</a></li></span>
+        <li><a href="#"><span class="icon-film"> Videos</a></li>
+        <li><a href="#"><span class="icon-headphones"> Radio</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+</div>
+	<!-- jQuery (es necesario para plugins JavaScript de Bootstrap  ) --> 
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/bootstrap.js"></script>
