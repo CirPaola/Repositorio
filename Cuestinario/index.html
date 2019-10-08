@@ -1,0 +1,69 @@
+<!– PARA EJEMPLO DASC — >
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript">
+          var num, acc = 0, op = "";
+
+          function Resultado()   { if(num1 == 4) {op1 = "t"}else{op1 = "f"} }
+          
+            if (op === "+") {}
+          }
+
+      function inic ()   {num1 = document.getElementById("num1");}
+        </script>
+    </head>
+    <body>
+
+        <!--termina código que incluye el menú responsivo-->
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Examen</h1>
+                <form role="form" id="login-form" 
+                      method="post" class="form-signin" 
+                      action="proveedor_guardar.php">
+                    <div class="h2">
+                        Contesta las preguntas correctamente
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="nombre_del_proveedor">1.- Cuanto es 2 + 2</label>
+                        <input type="text" class="form-control" id="num1" size="12" style="text-transform:uppercase;" required>
+                        <label for="nombre_del_proveedor">2.- Cuanto es 3 + 2</label>
+                        <input type="text" class="form-control" id="num2" size="12" style="text-transform:uppercase;" required>
+                        <label for="nombre_del_proveedor">3.- Cuanto es 31 + 2</label>
+                        <input type="text" class="form-control" id="num3" size="12" style="text-transform:uppercase;" required>
+                        <label for="nombre_del_proveedor">4.- Cuanto es 4 + 2</label>
+                        <input type="text" class="form-control" id="num4" size="12" style="text-transform:uppercase;" required>
+                        <label for="nombre_del_proveedor">5.- Cuanto es 2 + 7</label>
+                        <input type="text" class="form-control" id="num5" size="12" style="text-transform:uppercase;" required>
+                        <label for="nombre_del_proveedor">6.- Cuanto es 2 + 1</label>
+                        <input type="text" class="form-control" id="num6" size="12" style="text-transform:uppercase;" required>
+                        <label for="nombre_del_proveedor">7.- Cuanto es 2 + 8</label>
+                        <input type="text" class="form-control" id="num7" size="12" style="text-transform:uppercase;" required>
+                        <label for="nombre_del_proveedor">8.- Cuanto es 3 + 6</label>
+                        <input type="text" class="form-control" id="num8" size="12" style="text-transform:uppercase;" required>
+                        <label for="nombre_del_proveedor">9.- Cuanto es 9 + 1</label>
+                        <input type="text" class="form-control" id="num9" size="12" style="text-transform:uppercase;" required>
+                        <label for="nombre_del_proveedor">10.- Cuanto es 4 + 6</label>
+                        <input type="text" class="form-control" id="num10" size="12" style="text-transform:uppercase;" required>
+                    </div>
+                    <br>
+                    <button onClick = Resultado() type="submit" class="btn btn-primary">Evaluar</button>
+                    
+                </form>
+            </div>
+        </div>
+
+    </body>
+</html>
