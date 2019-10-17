@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Examen de matematicas</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="https://cdn.datatables.net/r/bs-3.3.5/jq-2.1.4,dt-1.10.8/datatables.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="css/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <link rel="icon" href="1.png">
+	<style type="text/css">
+		h1{
+			color: white;
+		}
+
+		#titulo{
+			background-color: black;
+		}
+
+		body {
+		background-color:#000; /*color fondo*/
+		background-image:url(2.jpg); /*imagen fondo*/
+		background-repeat: no-repeat; /*elimina copias*/
+		background-size: 100% 820px; /*tamaño de fondo*/
+		background-position: top; /*centra fondo*/
+		background-attachment: fixed;
+		}
+
+	</style>
+	<script type="text/javascript">
+		var cal=0;
+
+		function calcular(){
+			respuesta1 = document.getElementById("1")
+			if (respuesta1.value === "4") {
+				document.getElementById("color1").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color1").style.color = 'red';
+			}
+
+			respuesta2 = document.getElementById("2")
+			if (respuesta2.value === "5") {
+				document.getElementById("color2").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color2").style.color = 'red';
+			}
+
+			respuesta3 = document.getElementById("3")
+			if (respuesta3.value === "3") {
+				document.getElementById("color3").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color3").style.color = 'red';
+			}
+
+			respuesta4 = document.getElementById("4")
+			if (respuesta4.value === "6") {
+				document.getElementById("color4").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color4").style.color = 'red';
+			}
+
+			respuesta5 = document.getElementById("5")
+			if (respuesta5.value === "9") {
+				document.getElementById("color5").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color5").style.color = 'red';
+			}
+
+			respuesta6 = document.getElementById("6")
+			if (respuesta6.value === "3") {
+				document.getElementById("color6").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color6").style.color = 'red';
+			}
+
+			respuesta7 = document.getElementById("7")
+			if (respuesta7.value === "10") {
+				document.getElementById("color7").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color7").style.color = 'red';
+			}
+
+			respuesta8 = document.getElementById("8")
+			if (respuesta8.value === "9") {
+				document.getElementById("color8").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color8").style.color = 'red';
+			}
+
+			respuesta9 = document.getElementById("9")
+			if (respuesta9.value === "10") {
+				document.getElementById("color9").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color9").style.color = 'red';
+			}
+
+			respuesta10 = document.getElementById("10")
+			if (respuesta10.value === "10") {
+				document.getElementById("color10").style.color = 'green';
+				cal++;
+			}
+			else{
+				document.getElementById("color10").style.color = 'red';
+			}
+
+
+			document.getElementById("calificacion").innerHTML = "Resultado: " + cal;
+			document.getElementsByTagName("input").disabled = false;
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+            <div class="jumbotron">
+                <h1>Examen</h1>
+            <br>
+        	
+     <div class="form-group">
+	<div>
+		<label id="color1" for="nombre_del_proveedor">1. ¿Cuanto es 2 + 2? <br>
+		<input type="text" name="1" id="1" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+
+	<div>
+		<label id="color2">2. ¿Cuanto es 3 + 2?<br>
+		<input type="text" name="2" id="2" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+
+	<div>
+		<label id="color3">3. ¿Cuanto es 1 + 2?<br>
+		<input type="text" name="3" id="3" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+
+	<div>
+		<label id="color4">4. ¿Cuanto es 4 + 2?<br>
+		<input type="text" name="4" id="4" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+
+	<div>
+		<label id="color5">5. ¿Cuanto es 2 + 7?<br>
+		<input type="text" name="5" id="5" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+
+	<div>
+		<label id="color6">6. ¿Cuanto es 2 + 1?<br>
+		<input type="text" name="6" id="6" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+
+	<div>
+		<label id="color7">7. ¿Cuanto es 2 + 8?<br>
+		<input type="text" name="7" id="7" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+
+	<div>
+		<label id="color8">8. ¿Cuanto es 3 + 6?<br>
+		<input type="text" name="8" id="8" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+
+	<div>
+		<label id="color9">9. ¿Cuanto es 9 + 1?<br>
+		<input type="text" name="9" id="9" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+
+	<div>
+		<label id="color10">10. ¿Cuanto es 4 + 6?<br>
+		<input type="text" name="10" id="10" size="110" class="form-control" placeholder="Respuesta" onKeyUp="this.value=this.value.toLowerCase();" style="text-transform:uppercase;" required>
+		</label>
+	</div>
+<br>
+	<p id="boton"><button onclick="calcular()" class="btn btn-primary">Evaluar</button></p>
+
+	<div id="calificacion"></div>
+</div>
+</div>
+</body>
+</html>
