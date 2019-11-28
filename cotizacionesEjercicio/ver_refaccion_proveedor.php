@@ -18,13 +18,8 @@
             <div class="jumbotron">
                 <?php
                 //Consulta sin parámetros
-                $sel = $con->prepare("SELECT *from marca");
+                $sel = $con->prepare("SELECT *from refaccion_proveedor");
 
-                /* consulta con parametros
-                  $sel = $con->prepare("SELECT *from marca WHERE marca_id<=?");
-                  $parametro = 50;
-                  $sel->bind_param('i', $parametro);
-                  finaliza consulta con parámetros */
 
                 $sel->execute();
                 $res = $sel->get_result();
@@ -32,50 +27,31 @@
                 ?>
 
 
-                <?php
-
-                $hostname = "localhost";
-                $username = "root";
-                $password = "";
-                $databaseName = "tallerbd";
-
-                $connect = mysqli_connect($hostname, $username, $password, $databaseName);
-
-                
-                $query = "SELECT * FROM `marca`";
-                $result2 = mysqli_query($connect, $query);
-
-                $options = "";
-
-                while($row2 = mysqli_fetch_array($result2))
-                {
-                    $options = $options."<option value='$row2[0]'>$row2[1]</option>";
-                }
-                ?>
-
-                <h3>Seleccione la marca que desea de la lista o busquela en la tabla de la parte inferior</h3>
-                <select>
-                <?php echo $options;?>
-                </select>
-                <br>
-
-
 
                 Elementos devueltos por la consulta: <?php echo $row ?>
                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
-                    <th>ID MARCA</th>
-                    <th>NOMBRE MARCA</th>
+                    <th>ID REFACCION PROVEEDOR</th>
+                    <th>ID REFACCION</th>
+                    <th>ID PROVEEDOR</th>
+                    <th>FECHA SOLICITUD</th>
+                    <th>PRECIO</th>
                     </thead>
                     <tfoot>
-                    <th>ID MARCA</th>
-                    <th>NOMBRE MARCA</th>
+                    <th>ID REFACCION PROVEEDOR</th>
+                    <th>ID REFACCION</th>
+                    <th>ID PROVEEDOR</th>
+                    <th>FECHA SOLICITUD</th>
+                    <th>PRECIO</th>
                     </tfoot>
                     <tbody>
                         <?php while ($f = $res->fetch_assoc()) { ?>
                             <tr>
-                                <td><?php echo $f['marca_id'] ?></td>
-                                <td><?php echo $f['marca_nombre'] ?></td>
+                                <td><?php echo $f['refaccion_proveedor_id'] ?></td>
+                                <td><?php echo $f['id_refaccion'] ?></td>
+                                <td><?php echo $f['id_proveedor'] ?></td>
+                                <td><?php echo $f['fecha_solicitud'] ?></td>
+                                <td><?php echo $f['precio'] ?></td>
                             </tr>
                             <?php
                         }
@@ -92,4 +68,3 @@
         ?>
     </body>
 </html>
-

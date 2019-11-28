@@ -2,6 +2,20 @@
 <html>
     <head>
         <title>TODO supply a title</title>
+        <style type="text/css">
+            img{
+                transition: 1s;
+                padding: 15px;
+                width: 100px
+
+            }
+
+            img:hover {
+                transform: scale(3.0);
+            }
+
+
+        </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php
@@ -18,13 +32,8 @@
             <div class="jumbotron">
                 <?php
                 //Consulta sin parámetros
-                $sel = $con->prepare("SELECT *from marca");
+                $sel = $con->prepare("SELECT *from refaccion");
 
-                /* consulta con parametros
-                  $sel = $con->prepare("SELECT *from marca WHERE marca_id<=?");
-                  $parametro = 50;
-                  $sel->bind_param('i', $parametro);
-                  finaliza consulta con parámetros */
 
                 $sel->execute();
                 $res = $sel->get_result();
@@ -32,50 +41,31 @@
                 ?>
 
 
-                <?php
-
-                $hostname = "localhost";
-                $username = "root";
-                $password = "";
-                $databaseName = "tallerbd";
-
-                $connect = mysqli_connect($hostname, $username, $password, $databaseName);
-
-                
-                $query = "SELECT * FROM `marca`";
-                $result2 = mysqli_query($connect, $query);
-
-                $options = "";
-
-                while($row2 = mysqli_fetch_array($result2))
-                {
-                    $options = $options."<option value='$row2[0]'>$row2[1]</option>";
-                }
-                ?>
-
-                <h3>Seleccione la marca que desea de la lista o busquela en la tabla de la parte inferior</h3>
-                <select>
-                <?php echo $options;?>
-                </select>
-                <br>
-
-
 
                 Elementos devueltos por la consulta: <?php echo $row ?>
                 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                     <thead>
+                    <th>ID REFACCION</th>
                     <th>ID MARCA</th>
-                    <th>NOMBRE MARCA</th>
+                    <th>REFACCION NOMBRE</th>
+                    <th>REFACCION DESCRIPCION</th>
+                    <th>IMAGEN</th>
                     </thead>
                     <tfoot>
+                    <th>ID REFACCION</th>
                     <th>ID MARCA</th>
-                    <th>NOMBRE MARCA</th>
+                    <th>REFACCION NOMBRE</th>
+                    <th>REFACCION DESCRIPCION</th>
+                    <th>IMAGEN</th>
                     </tfoot>
                     <tbody>
                         <?php while ($f = $res->fetch_assoc()) { ?>
                             <tr>
+                                <td><?php echo $f['refaccion_id'] ?></td>
                                 <td><?php echo $f['marca_id'] ?></td>
-                                <td><?php echo $f['marca_nombre'] ?></td>
+                                <td><?php echo $f['refaccion_nombre'] ?></td>
+                                <td><?php echo $f['refaccion_descripcion'] ?></td>
+                                <td><img src="<?php echo $f['refaccion_imagen'] ?>" class="img-thumbnail img-fluid" > </td>
                             </tr>
                             <?php
                         }
@@ -92,4 +82,3 @@
         ?>
     </body>
 </html>
-
